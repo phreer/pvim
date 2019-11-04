@@ -51,4 +51,7 @@ set expandtab
 set softtabstop=2
 set ts=2
 set sw=2
+set colorcolumn=80
 map <C-n> :NERDTree<CR>
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
