@@ -8,11 +8,13 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+" My Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/c.vim'
 Plugin 'davidhalter/jedi-vim'
+"
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -48,10 +50,11 @@ filetype plugin indent on    " required
 set nu
 set autoindent
 set expandtab
-set softtabstop=2
-set ts=2
-set sw=2
+set softtabstop=4
+set ts=4
+set sw=4
 set colorcolumn=80
 map <C-n> :NERDTree<CR>
 autocmd vimenter * NERDTree
+autocmd vimenter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
