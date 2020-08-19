@@ -55,8 +55,9 @@ set ts=4
 set sw=4
 set colorcolumn=80
 map <C-n> :NERDTree<CR>
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd w
+" Open NerdTree on startup. 
+" autocmd vimenter * NERDTree
+" autocmd vimenter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " In insert or command mode, move normally by using Ctrl
